@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Deel4Oefening1.Service" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Deel4Oefening1.Service" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfSpeler">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Speler" nillable="true" type="tns:Speler" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSpeler" nillable="true" type="tns:ArrayOfSpeler" />
+  <xs:complexType name="Speler">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BondsNr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Geb_Datum" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Geslacht" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="HuisNr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Jaartoe" type="xs:int" />
+      <xs:element minOccurs="0" name="Naam" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Plaats" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Postcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SpelersNr" type="xs:int" />
+      <xs:element minOccurs="0" name="Straat" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Telefoon" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Voorletters" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Speler" nillable="true" type="tns:Speler" />
+</xs:schema>
